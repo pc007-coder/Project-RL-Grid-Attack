@@ -1,0 +1,29 @@
+0.01 SEC
+
+mAX EPISODE- 5000
+mAX EPISODE LENTH - 100 SEC
+AVG WINDOW LWNGTH- 80
+STOPPING CRITERIA -AVG REWARD
+STOPPING VALUE - 10 e^5
+
+
+agentM =
+
+Type TD3
+Observation Dimension
+      observations : [3 1]
+Action Dimension
+         frequency : [3 1]
+Actor Learn Rate 0.01
+Critic Learn Rate 0.01
+
+
+
+
+
+
+function rwd = fcn(f1,f2,f3)
+
+rwd = (1- abs(f1-60)./0.5) +(1- abs(f2-60)./0.5) + (1- abs(f3-60)./0.5);
+
+end
